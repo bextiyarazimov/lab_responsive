@@ -8,13 +8,15 @@ li {
   list-style: none;
   color: #fff;
   cursor: pointer;
+  font-size: 1.2rem;
+  font-family: sans-serif;
 }
 
 .header {
   width: 100%;
   height: 5rem;
   background-color: #8d4ddf;
-  padding: 0 30px;
+  padding: 0 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,20 +41,19 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.3rem;
+  gap: 1.8rem;
 }
-.header_right_nav_menu_a {
-  background: hsl(266, 100%, 97%);
-  color: white;
-  cursor: pointer;
+.header_right_nav_menu_item {
+  color: rgb(7, 4, 4);
 }
 .header_right_buttons {
   margin-left: 1rem;
 }
 .header_right_buttons_item {
   padding: 0.5rem;
+  font-size: 1.2rem;
   color: white;
-  background-color: rgb(8, 8, 78);
+  background-color: #0D6EFD;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -60,8 +61,14 @@ li {
 .header_right_buttons_item:nth-child(1) {
   background-color: transparent;
 }
+.header_right_buttons_item:hover:nth-child(2) {
+  background-color: rgb(107, 106, 106);
+  color: white;
+  transition: 1s;
+}
 .header_menu_icon {
   display: none;
+  margin-top: 30px;
   color: white;
   font-size: 2rem;
 }
