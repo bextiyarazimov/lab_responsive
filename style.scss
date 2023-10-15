@@ -1,0 +1,81 @@
+ @import './mixins';
+ @import './variable';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ li{
+    list-style: none;
+    color: #fff;
+    cursor: pointer;
+ }
+ .header{
+    width: 100%;
+    height: 5rem;
+    background-color: #8d4ddf;
+    padding: 0 30px;
+    @include d-flex(flex,space-between,center,1rem);
+    &_logo{
+        width: 8rem;
+        & img{
+            width:100%;
+        }
+        &_item:nth-child(2) {
+            display: none;
+        }
+    }
+   &_right{
+    @include d-flex(flex,space-between,center,2rem);
+    &_nav_menu{
+        @include d-flex(flex,space-between,center,1.3rem);
+        &_a{
+            background: hsl(266, 100%, 97%);
+            color:white;
+            cursor: pointer;
+        }
+    }
+    &_buttons{
+        margin-left: 1rem;
+        &_item{
+            padding: .5rem;
+            color: white;
+            background-color: rgb(8,8,78);
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            &:nth-child(1){
+                background-color: transparent;
+            }
+        }
+    }
+ }
+  &_menu_icon{
+    display: none;
+    color: white;
+    font-size: 2rem;
+  }
+ }
+
+ @media screen and (max-width:992px) {
+    .header{
+        background-color: white;
+        &_logo_item:nth-child(2){
+            display: block;
+        }
+        &_logo_item:nth-child(1){
+            display: none;
+        }
+        &_right{
+            display: none;
+        }
+        &_menu_icon{
+            display: block;
+            color: black;
+            
+        }
+    }
+
+ }
+
